@@ -27,6 +27,11 @@ yarn start
 
 ## Step 2: Start your Application
 
+### Start JSON Server:
+```bash
+yarn json-server --watch db.json  
+```
+
 ### For Android
 
 ```bash
@@ -50,6 +55,7 @@ yarn ios
 This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
 
 ## How to run the E2E tests:
+>**Important**: You have to be running the Metro Server and the JSON Server before running the tests
 
 ### For Android
 
