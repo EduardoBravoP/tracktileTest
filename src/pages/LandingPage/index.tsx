@@ -3,8 +3,9 @@ import {StatusBar} from 'react-native';
 import {Container, Logo, Image, Title, Description} from './styles';
 import GoalKeeperImg from '../../assets/goalKeeper.png';
 import Button from '../../components/Button';
+import {LandingPageProps} from './interface';
 
-export default function LandingPage() {
+export default function LandingPage({setShowProducts}: LandingPageProps) {
   return (
     <>
       <StatusBar
@@ -26,7 +27,7 @@ export default function LandingPage() {
           professional soccer products
         </Description>
 
-        <Button>View products</Button>
+        <Button onPress={() => setShowProducts(true)}>View products</Button>
       </Container>
     </>
   );

@@ -1,10 +1,10 @@
 import React from 'react';
-import {ButtonProps} from './interface';
+import {CustomButtonProps} from './interface';
 import {Container, TextButton} from './styles';
 
-export default function Button({children}: ButtonProps) {
+export default function Button({children, ...rest}: CustomButtonProps) {
   return (
-    <Container activeOpacity={0.8}>
+    <Container activeOpacity={0.8} {...rest}>
       <TextButton>{children}</TextButton>
     </Container>
   );

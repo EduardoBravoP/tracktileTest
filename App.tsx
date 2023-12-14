@@ -5,14 +5,17 @@
  * @format
  */
 
-import React from 'react';
+import React, {useState} from 'react';
 import {StatusBar} from 'react-native';
 
 import theme from './src/styles/theme';
 import LandingPage from './src/pages/LandingPage';
 import {ThemeProvider} from 'styled-components/native';
+import {Products} from './src/pages/Products';
 
 function App(): React.JSX.Element {
+  const [showProducts, setShowProducts] = useState(false);
+
   return (
     <>
       <StatusBar
@@ -21,7 +24,11 @@ function App(): React.JSX.Element {
       />
 
       <ThemeProvider theme={theme}>
-        <LandingPage />
+        {showProducts ? (
+          <Products />
+        ) : (
+          <LandingPage setShowProducts={setShowProducts} />
+        )}
       </ThemeProvider>
     </>
   );
