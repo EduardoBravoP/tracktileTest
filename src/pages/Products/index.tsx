@@ -1,6 +1,6 @@
 /* eslint-disable react-native/no-inline-styles */
 import React, {useCallback, useEffect, useMemo, useState} from 'react';
-import {FlatList, StatusBar, Text} from 'react-native';
+import {ActivityIndicator, FlatList, StatusBar} from 'react-native';
 import {Header} from '../../components/Header';
 import theme from '../../styles/theme';
 import {
@@ -20,6 +20,7 @@ export function Products() {
   const [selectedFilter, setSelectedFilter] =
     useState<SelectedFilterProps>('All');
   const [search, setSearch] = useState('');
+  const [currentPage, setCurrentPage] = useState(1);
 
   const productsWithFilter = useMemo(() => {
     return products?.filter(product => {
@@ -30,44 +31,45 @@ export function Products() {
     });
   }, [products, search]);
 
-  const handleChangeFilter = useCallback(
-    async (filterPressed: SelectedFilterProps) => {
-      if (selectedFilter === filterPressed) {
-        return;
+  const fetchProducts = useCallback(async () => {
+    console.log(currentPage);
+    let response;
+
+    switch (selectedFilter) {
+      case 'All':
+        response = await fetch(
+          `http://localhost:3000/allProducts?_page=${currentPage}&_limit=5`,
+        );
+        break;
+      case 'Popular':
+        response = await fetch(
+          `http://localhost:3000/popularProducts?_page=${currentPage}&_limit=5`,
+        );
+        break;
+      case 'Drop price':
+        response = await fetch(
+          `http://localhost:3000/dropPriceProducts?_page=${currentPage}&_limit=5`,
+        );
+        break;
+    }
+
+    const productsResponse = await response.json();
+    setProducts(prevValue => {
+      if (!prevValue || currentPage === 1) {
+        return productsResponse;
+      } else {
+        return [...prevValue, ...productsResponse];
       }
+    });
+  }, [currentPage, selectedFilter]);
 
-      setSelectedFilter(filterPressed);
-
-      let response;
-
-      switch (filterPressed) {
-        case 'All':
-          response = await fetch('http://localhost:3000/allProducts');
-          break;
-        case 'Popular':
-          response = await fetch('http://localhost:3000/popularProducts');
-          break;
-        case 'Drop price':
-          response = await fetch('http://localhost:3000/popularProducts');
-          break;
-      }
-
-      const productsResponse = await response.json();
-      setProducts(productsResponse);
-    },
-    [selectedFilter],
-  );
+  const handleLoadMoreProducts = () => {
+    setCurrentPage(prevValue => prevValue + 1);
+  };
 
   useEffect(() => {
-    const fetchProducts = async () => {
-      const response = await fetch('http://localhost:3000/allProducts');
-      const productsResponse = await response.json();
-
-      setProducts(productsResponse);
-    };
-
     fetchProducts();
-  }, []);
+  }, [fetchProducts, currentPage, selectedFilter]);
 
   return (
     <SafeArea>
@@ -89,7 +91,14 @@ export function Products() {
             paddingLeft: 4,
           }}>
           <Filter
-            onPress={() => handleChangeFilter('All')}
+            onPress={() => {
+              if (selectedFilter === 'All') {
+                return;
+              }
+
+              setSelectedFilter('All');
+              setCurrentPage(1);
+            }}
             selected={selectedFilter === 'All'}
             style={{
               shadowColor: 'rgba(0, 0, 0, 0.5)',
@@ -104,7 +113,14 @@ export function Products() {
             <FilterText selected={selectedFilter === 'All'}>All</FilterText>
           </Filter>
           <Filter
-            onPress={() => handleChangeFilter('Popular')}
+            onPress={() => {
+              if (selectedFilter === 'Popular') {
+                return;
+              }
+
+              setSelectedFilter('Popular');
+              setCurrentPage(1);
+            }}
             selected={selectedFilter === 'Popular'}
             style={{
               shadowColor: 'rgba(0, 0, 0, 0.5)',
@@ -121,7 +137,14 @@ export function Products() {
             </FilterText>
           </Filter>
           <Filter
-            onPress={() => handleChangeFilter('Drop price')}
+            onPress={() => {
+              if (selectedFilter === 'Drop price') {
+                return;
+              }
+
+              setSelectedFilter('Drop price');
+              setCurrentPage(1);
+            }}
             selected={selectedFilter === 'Drop price'}
             style={{
               shadowColor: 'rgba(0, 0, 0, 0.5)',
@@ -151,9 +174,11 @@ export function Products() {
               paddingBottom: 250,
               paddingHorizontal: 20,
             }}
+            onEndReached={handleLoadMoreProducts}
+            onEndReachedThreshold={0}
           />
         ) : (
-          <Text>TODO: carregando...</Text>
+          <ActivityIndicator color={theme.colors.text} size={24} />
         )}
       </Container>
     </SafeArea>

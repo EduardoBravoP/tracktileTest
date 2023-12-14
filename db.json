@@ -148,6 +148,50 @@
       "description": "Nike Arsenal Home Shirt 2023 2024 Adults",
       "avatar": "https://www.sportsdirect.com/images/products/37891808_h.jpg",
       "price": 65
+    },
+    {
+      "id": 4,
+      "name": "Brazil Home Shirt",
+      "description": "Nike Brazil Home Shirt 2023 2024 Adults",
+      "avatar": "https://www.soccerbox.com/media/catalog/product/cache/e5c18d5f608fefb2b3ef83fcb1922b34/b/r/brazil-home-shirt-2022-23.jpg",
+      "price": 65
+    },
+    {
+      "id": 5,
+      "name": "Chelsea Home Shirt",
+      "description": "Nike Chelsea Home Shirt 2023 2024 Adults",
+      "avatar": "https://www.sportsdirect.com/images/products/37730418_h.jpg",
+      "price": 65
+    }
+  ],
+  "dropPriceProducts": [
+    {
+      "id": 1,
+      "name": "Brazil Home Shirt",
+      "description": "Nike Brazil Home Shirt 2023 2024 Adults",
+      "avatar": "https://www.soccerbox.com/media/catalog/product/cache/e5c18d5f608fefb2b3ef83fcb1922b34/b/r/brazil-home-shirt-2022-23.jpg",
+      "price": 65
+    },
+    {
+      "id": 2,
+      "name": "Corinthians Home Shirt",
+      "description": "Nike Corinthians Home Shirt 2023 2024 Adults",
+      "avatar": "https://acdn.mitiendanube.com/stores/002/427/634/products/5783dae41-7f3cf304de2016650b16958493881292-1024-1024.jpg",
+      "price": 65
+    },
+    {
+      "id": 3,
+      "name": "Arsenal Home Shirt",
+      "description": "Nike Arsenal Home Shirt 2023 2024 Adults",
+      "avatar": "https://www.sportsdirect.com/images/products/37891808_h.jpg",
+      "price": 65
+    },
+    {
+      "id": 4,
+      "name": "Nike Mercurial Superfly",
+      "description": "Nike Football Boots light weight",
+      "avatar": "https://www.sportsdirect.com/images/imgzoom/19/19102141_xxl.jpg",
+      "price": 89.99
     }
   ]
 }
