@@ -2,8 +2,9 @@ import styled from 'styled-components/native';
 
 export const Container = styled.View`
   border-radius: 20px;
-  width: 100%;
+  width: 160px;
   background-color: ${({theme}) => theme.colors.background};
+  margin-bottom: 24px;
 `;
 
 export const ProductImage = styled.Image`

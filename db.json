@@ -1,0 +1,153 @@
+{
+  "allProducts": [
+    {
+      "id": 1,
+      "name": "NikePremier 3",
+      "description": "Firm-ground Football Boot",
+      "avatar": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/bfff239c-9c94-4c4c-ac58-96760bdeb9f7/nikepremier-3-football-boot-j7PbSL.png",
+      "price": 109.95
+    },
+    {
+      "id": 2,
+      "name": "Nike Mercurial Vapor 15 Elite",
+      "description": "FG Low-Top Football Boot",
+      "avatar": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/e8e14952-410c-4c2f-9340-0a0b3956dd2c/mercurial-vapor-15-elite-fg-low-top-football-boot-KHcmQd.png",
+      "price": 230
+    },
+    {
+      "id": 3,
+      "name": "Nike Phantom GX Elite",
+      "description": "FG Low-Top Football Boot",
+      "avatar": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/198b0ff9-71cf-4a66-8c06-002c05f47eb3/phantom-gx-elite-low-top-fg-football-boot-NBtmXl.png",
+      "price": 240
+    },
+    {
+      "id": 4,
+      "name": "Nike Zoom Mercurial Superfly 9 Elite XXV FG",
+      "description": "Firm-ground Football Boot",
+      "avatar": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/91efd39b-b82f-4da4-8087-05eee067d4b3/zoom-mercurial-superfly-9-elite-xxv-fg-football-boot-Rs9bnC.png",
+      "price": 195.97
+    },
+    {
+      "id": 5,
+      "name": "Nike Mercurial Superfly",
+      "description": "Nike Football Boots light weight",
+      "avatar": "https://www.sportsdirect.com/images/imgzoom/19/19102141_xxl.jpg",
+      "price": 89.99
+    },
+    {
+      "id": 6,
+      "name": "MLS 24 Competition Ball",
+      "description": "Soccer ball for MLS 24",
+      "avatar": "https://assets.adidas.com/images/w_766,h_766,f_auto,q_auto,fl_lossy,c_fill,g_auto/73031360d52f49e985a4ef913a79f063_9366/mls-24-competition-nfhs-ball.jpg",
+      "price": 60
+    },
+    {
+      "id": 7,
+      "name": "Conext 24 Legue Ball",
+      "description": "Soccer ball for Conext 24 League",
+      "avatar": "https://assets.adidas.com/images/w_766,h_766,f_auto,q_auto,fl_lossy,c_fill,g_auto/7a7a87ccad9b4b45b9990e60383afb2a_9366/conext-24-league-ball.jpg",
+      "price": 40
+    },
+    {
+      "id": 8,
+      "name": "UCL 24 Ball",
+      "description": "UCL MINI 23/24 GROUP STAGE BALL",
+      "avatar": "https://assets.adidas.com/images/w_766,h_766,f_auto,q_auto,fl_lossy,c_fill,g_auto/83ab5ba65bfe455d990dafcd0022e32c_9366/ucl-mini-23-24-group-stage-ball.jpg",
+      "price": 15
+    },
+    {
+      "id": 9,
+      "name": "FINAL OCEAUNZ PRO BALL",
+      "description": "Gold Metallic / Dark Blue / Clear Aqua / Solar Orange",
+      "avatar": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/c4f9730da1494ca1831d297e4bad2ff0_9366/Final_Oceaunz_Pro_Ball_Gold_IA1011_HM1.jpg",
+      "price": 153
+    },
+    {
+      "id": 10,
+      "name": "MLS 24 Club Ball",
+      "description": "Glow Blue / Samba Blue / Solar Yellow",
+      "avatar": "https://assets.adidas.com/images/w_766,h_766,f_auto,q_auto,fl_lossy,c_fill,g_auto/2a10e103ba944260b5e576df80f4bfe9_9366/mls-24-club-ball.jpg",
+      "price": 25
+    },
+    {
+      "id": 11,
+      "name": "Arsenal Home Shirt",
+      "description": "Nike Arsenal Home Shirt 2023 2024 Adults",
+      "avatar": "https://www.sportsdirect.com/images/products/37891808_h.jpg",
+      "price": 65
+    },
+    {
+      "id": 12,
+      "name": "Liverpool Home Shirt",
+      "description": "Nike Liverpool Home Shirt 2023 2024 Adults",
+      "avatar": "https://www.sportsdirect.com/images/products/37880408_h.jpg",
+      "price": 65
+    },
+    {
+      "id": 13,
+      "name": "Chelsea Home Shirt",
+      "description": "Nike Chelsea Home Shirt 2023 2024 Adults",
+      "avatar": "https://www.sportsdirect.com/images/products/37730418_h.jpg",
+      "price": 65
+    },
+    {
+      "id": 14,
+      "name": "NewCastle Home Shirt",
+      "description": "Nike NewCastle Home Shirt 2023 2024 Adults",
+      "avatar": "https://www.sportsdirect.com/images/products/37719803_h.jpg",
+      "price": 65
+    },
+    {
+      "id": 15,
+      "name": "Man. United Home Shirt",
+      "description": "Nike Man. United Home Shirt 2023 2024 Adults",
+      "avatar": "https://www.sportsdirect.com/images/products/37893608_h.jpg",
+      "price": 65
+    },
+    {
+      "id": 16,
+      "name": "Man. City Home Shirt",
+      "description": "Nike Man. City Home Shirt 2023 2024 Adults",
+      "avatar": "https://www.sportsdirect.com/images/products/37840918_h.jpg",
+      "price": 65
+    },
+    {
+      "id": 17,
+      "name": "Corinthians Home Shirt",
+      "description": "Nike Corinthians Home Shirt 2023 2024 Adults",
+      "avatar": "https://acdn.mitiendanube.com/stores/002/427/634/products/5783dae41-7f3cf304de2016650b16958493881292-1024-1024.jpg",
+      "price": 65
+    },
+    {
+      "id": 18,
+      "name": "Brazil Home Shirt",
+      "description": "Nike Brazil Home Shirt 2023 2024 Adults",
+      "avatar": "https://www.soccerbox.com/media/catalog/product/cache/e5c18d5f608fefb2b3ef83fcb1922b34/b/r/brazil-home-shirt-2022-23.jpg",
+      "price": 65
+    }
+  ],
+  "popularProducts": [
+    {
+      "id": 1,
+      "name": "NikePremier 3",
+      "description": "Firm-ground Football Boot",
+      "avatar": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/bfff239c-9c94-4c4c-ac58-96760bdeb9f7/nikepremier-3-football-boot-j7PbSL.png",
+      "price": 109.95
+    },
+    {
+      "id": 2,
+      "name": "MLS 24 Competition Ball",
+      "description": "Soccer ball for MLS 24",
+      "avatar": "https://assets.adidas.com/images/w_766,h_766,f_auto,q_auto,fl_lossy,c_fill,g_auto/73031360d52f49e985a4ef913a79f063_9366/mls-24-competition-nfhs-ball.jpg",
+      "price": 60
+    },
+    {
+      "id": 3,
+      "name": "Arsenal Home Shirt",
+      "description": "Nike Arsenal Home Shirt 2023 2024 Adults",
+      "avatar": "https://www.sportsdirect.com/images/products/37891808_h.jpg",
+      "price": 65
+    }
+  ]
+}

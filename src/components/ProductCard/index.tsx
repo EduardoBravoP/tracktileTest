@@ -8,8 +8,9 @@ import {
   Description,
   ProductInfoWrapper,
 } from './styles';
+import {ProductCardProps} from './interface';
 
-export default function ProductCard() {
+export default function ProductCard({product}: ProductCardProps) {
   return (
     <Container
       style={{
@@ -22,12 +23,17 @@ export default function ProductCard() {
         shadowOpacity: 0.2,
         elevation: 20,
       }}>
-      <ProductImage source={{uri: 'https://picsum.photos/200/300'}} />
+      <ProductImage source={{uri: product.avatar}} resizeMode="center" />
 
       <ProductInfoWrapper>
-        <Price>$50</Price>
-        <Title>Football ball</Title>
-        <Description>adidas ball</Description>
+        <Price>
+          {product.price.toLocaleString('en-US', {
+            currency: 'USD',
+            style: 'currency',
+          })}
+        </Price>
+        <Title>{product.name}</Title>
+        <Description>{product.description}</Description>
       </ProductInfoWrapper>
     </Container>
   );

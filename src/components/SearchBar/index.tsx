@@ -2,9 +2,10 @@
 import React from 'react';
 import Icon from 'react-native-vector-icons/Feather';
 import theme from '../../styles/theme';
-import {Container, SearchInput} from './styles';
+import {ClearSearchButton, Container, SearchInput} from './styles';
+import {SearchBarProps} from './interface';
 
-export function SearchBar() {
+export function SearchBar({search, setSearch}: SearchBarProps) {
   return (
     <Container
       style={{
@@ -22,7 +23,19 @@ export function SearchBar() {
       <SearchInput
         placeholder="Search products"
         placeholderTextColor={theme.colors.description}
+        onChangeText={setSearch}
+        value={search}
       />
+
+      {search.length > 0 && (
+        <ClearSearchButton
+          activeOpacity={0.8}
+          onPress={() => {
+            setSearch('');
+          }}>
+          <Icon name="x" size={10} color={theme.colors.background} />
+        </ClearSearchButton>
+      )}
     </Container>
   );
 }
