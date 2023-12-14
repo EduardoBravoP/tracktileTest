@@ -25,6 +25,7 @@ export function SearchBar({search, setSearch}: SearchBarProps) {
         placeholderTextColor={theme.colors.description}
         onChangeText={setSearch}
         value={search}
+        testID="searchBar"
       />
 
       {search.length > 0 && (

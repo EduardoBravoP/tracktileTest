@@ -175,6 +175,7 @@ export function Products() {
             }}
             onEndReached={handleLoadMoreProducts}
             onEndReachedThreshold={0}
+            testID="flatList"
           />
         ) : (
           <ActivityIndicator color={theme.colors.text} size={24} />
