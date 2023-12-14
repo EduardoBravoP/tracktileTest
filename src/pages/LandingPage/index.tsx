@@ -21,7 +21,7 @@ export default function LandingPage({setShowProducts}: LandingPageProps) {
 
         <Image source={GoalKeeperImg} />
 
-        <Title>Soccer products with great prices</Title>
+        <Title>Soccer goods with great prices</Title>
         <Description>
           Click the button below to access our catalogue of the best
           professional soccer products
