@@ -32,7 +32,6 @@ export function Products() {
   }, [products, search]);
 
   const fetchProducts = useCallback(async () => {
-    console.log(currentPage);
     let response;
 
     switch (selectedFilter) {
