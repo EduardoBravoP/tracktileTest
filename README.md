@@ -53,14 +53,26 @@ This is one way to run your app — you can also run it directly from within And
 
 ### For Android
 
+build:
 ```bash
-npx detox test --configuration android.emu.debug
+npx detox build --configuration android.emu.debug //build tests
+```
+
+and run:
+```bash
+npx detox test --configuration android.emu.debug //run tests
 ```
 
 ### For iOS
 
+build:
 ```bash
-npx detox test --configuration ios.sim.debug
+npx detox build --configuration ios.sim.debug //build tests
+```
+
+and run:
+```bash
+npx detox test --configuration ios.sim.debug //run tests
 ```
 
 >**Note**: If you get an error about not having the following emulator installed just change the ```.detoxrc.js``` file on the simulator settings. You can read better in the docs: https://wix.github.io/Detox/docs/introduction/project-setup#step-3-device-configs
